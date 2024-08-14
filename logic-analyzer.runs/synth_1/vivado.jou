@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Aug 14 14:51:23 2024
+# Process ID: 46500
+# Current directory: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1
+# Command line: vivado.exe -log multi_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source multi_buffer.tcl
+# Log file: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1/multi_buffer.vds
+# Journal file: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1\vivado.jou
+# Running On        :tk00n
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency     :3187 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :16907 MB
+# Swap memory       :8923 MB
+# Total Virtual     :25830 MB
+# Available Virtual :4948 MB
+#-----------------------------------------------------------
+source multi_buffer.tcl -notrace
