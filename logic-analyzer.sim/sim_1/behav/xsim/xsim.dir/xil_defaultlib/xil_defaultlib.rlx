@@ -2,5 +2,7 @@
 2020.2
 May 22 2024
 19:03:11
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,1723788177,vhdl,,,,multi_buffer_tb,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/single_buffer_tb.vhd,1723652831,vhdl,,,,single_buffer_tb,,,,,,,,
-C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd,1723617633,vhdl,,,,single_buffer,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd,1723792515,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,,,multi_buffer;multi_channel_type,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd,1723784822,vhdl,,,,single_buffer,,,,,,,,

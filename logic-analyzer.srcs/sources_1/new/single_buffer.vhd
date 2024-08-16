@@ -8,7 +8,8 @@ entity single_buffer is
         data_in   : in std_logic_vector(7 downto 0);
         trigger   : in std_logic;
         read      : in std_logic;
-        data_out  : out std_logic_vector(7 downto 0)
+        data_out  : out std_logic_vector(7 downto 0);
+        out_en    : out std_logic
     );
 end single_buffer;
 
@@ -56,9 +57,11 @@ begin
                 wr_idx <= (wr_idx + 8) mod BUFFER_SIZE;
             end if;
 
+            out_en <= '0';
             if read = '1' then
                 buf_out <= buf(rd_idx + 7 downto rd_idx);
                 rd_idx <= (rd_idx + 8) mod BUFFER_SIZE;
+                out_en <= '1';
             end if;
             
         end if;

@@ -3,77 +3,67 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="single_buffer_tb_behav.wdb" id="1">
+      <db_ref path="multi_buffer_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="single_buffer_tb" />
+            <top_module name="multi_buffer_tb" />
+            <top_module name="multi_channel_type" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="80.751 ns"></ZoomEndTime>
-      <Cursor1Time time="77.000 ns"></Cursor1Time>
+      <ZoomEndTime time="109.001 ns"></ZoomEndTime>
+      <Cursor1Time time="92.050 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="237"></NameColumnWidth>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wvobject fp_name="/single_buffer_tb/clk" type="logic">
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/multi_buffer_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/reset" type="logic">
+   <wvobject fp_name="/multi_buffer_tb/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   <wvobject type="divider" fp_name="divider55">
+      <obj_property name="label">New Divider 8</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider16">
-      <obj_property name="label">New Divider 4</obj_property>
+   <wvobject fp_name="/multi_buffer_tb/all_data_in" type="array">
+      <obj_property name="ElementShortName">all_data_in[3:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">all_data_in[3:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider56">
+      <obj_property name="label">New Divider 9</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">#E0FFFF</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/trigger" type="logic">
-      <obj_property name="ElementShortName">trigger</obj_property>
-      <obj_property name="ObjectShortName">trigger</obj_property>
+   <wvobject fp_name="/multi_buffer_tb/triggers" type="array">
+      <obj_property name="ElementShortName">triggers[3:0]</obj_property>
+      <obj_property name="ObjectShortName">triggers[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/read" type="logic">
-      <obj_property name="ElementShortName">read</obj_property>
-      <obj_property name="ObjectShortName">read</obj_property>
+   <wvobject fp_name="/multi_buffer_tb/uut/triggered_channels" type="array">
+      <obj_property name="ElementShortName">triggered_channels[3:0]</obj_property>
+      <obj_property name="ObjectShortName">triggered_channels[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider15">
+   <wvobject type="divider" fp_name="divider57">
+      <obj_property name="label">New Divider 10</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#F0E68C</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/data_out" type="array">
+   <wvobject fp_name="/multi_buffer_tb/data_out" type="array">
       <obj_property name="ElementShortName">data_out[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/single_buffer_tb/clk_period" type="other">
-      <obj_property name="ElementShortName">clk_period</obj_property>
-      <obj_property name="ObjectShortName">clk_period</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider12">
-      <obj_property name="label">New Divider</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">#FF0080</obj_property>
-   </wvobject>
-   <wvobject fp_name="/single_buffer_tb/uut/buf" type="array">
-      <obj_property name="ElementShortName">buf[47:0]</obj_property>
-      <obj_property name="ObjectShortName">buf[47:0]</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider13">
-      <obj_property name="label">New Divider 1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">#FFFF00</obj_property>
-   </wvobject>
-   <wvobject fp_name="/single_buffer_tb/uut/rd_idx" type="other">
-      <obj_property name="ElementShortName">rd_idx</obj_property>
-      <obj_property name="ObjectShortName">rd_idx</obj_property>
-   </wvobject>
-   <wvobject fp_name="/single_buffer_tb/uut/wr_idx" type="other">
-      <obj_property name="ElementShortName">wr_idx</obj_property>
-      <obj_property name="ObjectShortName">wr_idx</obj_property>
+   <wvobject fp_name="/multi_buffer_tb/which_channel_out" type="array">
+      <obj_property name="ElementShortName">which_channel_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">which_channel_out[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>
