@@ -15,7 +15,7 @@ end single_buffer;
 
 architecture behavioral of single_buffer is
     
-    constant BUFFER_SIZE : integer := 48;
+    constant BUFFER_SIZE : integer := 800;
 
     -- If previously triggered
     signal triggered : boolean := FALSE;

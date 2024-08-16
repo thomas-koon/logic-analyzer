@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="109.001 ns"></ZoomEndTime>
-      <Cursor1Time time="92.050 ns"></Cursor1Time>
+      <ZoomStartTime time="0.937 ns"></ZoomStartTime>
+      <ZoomEndTime time="95.038 ns"></ZoomEndTime>
+      <Cursor1Time time="139.637 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/multi_buffer_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -27,15 +27,6 @@
    <wvobject fp_name="/multi_buffer_tb/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider55">
-      <obj_property name="label">New Divider 8</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">#FFFFFF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/all_data_in" type="array">
-      <obj_property name="ElementShortName">all_data_in[3:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">all_data_in[3:0][7:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider56">
       <obj_property name="label">New Divider 9</obj_property>
@@ -45,11 +36,6 @@
    <wvobject fp_name="/multi_buffer_tb/triggers" type="array">
       <obj_property name="ElementShortName">triggers[3:0]</obj_property>
       <obj_property name="ObjectShortName">triggers[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/uut/triggered_channels" type="array">
-      <obj_property name="ElementShortName">triggered_channels[3:0]</obj_property>
-      <obj_property name="ObjectShortName">triggered_channels[3:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider57">
@@ -65,5 +51,35 @@
       <obj_property name="ElementShortName">which_channel_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">which_channel_out[3:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider11">
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(3)\/buffer_instance/buf" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">buf[79:0]</obj_property>
+      <obj_property name="ObjectShortName">buf[79:0]</obj_property>
+      <obj_property name="label">buf 3</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(2)\/buffer_instance/buf" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">buf[79:0]</obj_property>
+      <obj_property name="ObjectShortName">buf[79:0]</obj_property>
+      <obj_property name="label">buf 2</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(1)\/buffer_instance/buf" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">buf[79:0]</obj_property>
+      <obj_property name="ObjectShortName">buf[79:0]</obj_property>
+      <obj_property name="label">buf 1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(0)\/buffer_instance/buf" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">buf[79:0]</obj_property>
+      <obj_property name="ObjectShortName">buf[79:0]</obj_property>
+      <obj_property name="label">buf 0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

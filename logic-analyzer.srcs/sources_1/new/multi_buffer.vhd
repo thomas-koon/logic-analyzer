@@ -93,6 +93,9 @@ begin
             elsif triggered_channels((rr_idx + 3) mod CHANNELS) = '1' or triggers((rr_idx + 3) mod CHANNELS) = '1' then
                 -- Check the third next channel in the round-robin order
                 rr_idx <= (rr_idx + 3) mod CHANNELS;
+            elsif triggered_channels((rr_idx + 4) mod CHANNELS) = '1' or triggers((rr_idx + 4) mod CHANNELS) = '1' then
+                -- Check the current channel in the round-robin order
+                rr_idx <= (rr_idx + 4) mod CHANNELS;
             else
                 -- If no triggered channels are found, keep rr_idx and disable read signals
                 read_signals <= (others => '0');

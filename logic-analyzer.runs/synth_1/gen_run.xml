@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7s25csga324-1" LaunchTime="1723791722" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/data_buf.dcp">
   <File Type="PA-TCL" Name="multi_buffer.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="multi_buffer_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="multi_buffer_reports.tcl"/>
   <File Type="RDS-RDS" Name="multi_buffer.vds"/>
   <File Type="RDS-UTIL" Name="multi_buffer_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="multi_buffer_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="multi_buffer.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="multi_buffer_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="multi_buffer_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/single_buffer.vhd">

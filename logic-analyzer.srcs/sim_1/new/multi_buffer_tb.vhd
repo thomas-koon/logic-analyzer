@@ -69,30 +69,18 @@ begin
         reset <= '0';
         wait for 20 ns;
 
-        -- RR: 0
-        all_data_in(0) <= "00000001";
-        triggers(0) <= '1';
+        all_data_in(0) <= x"AA";
+        all_data_in(1) <= x"BB";
+        all_data_in(2) <= x"CC"; 
+        all_data_in(3) <= x"DD";
+        triggers <= "1000";
+        wait for CLK_PERIOD;
 
         wait for CLK_PERIOD;
 
-        -- RR: 1
-        all_data_in(1) <= "00000010";
-        triggers(1) <= '1';
-
         wait for CLK_PERIOD;
 
-        -- RR: 2
-        all_data_in(0) <= "00000011";
-        all_data_in(2) <= "00000100";
-        triggers(0) <= '1';
-        triggers(2) <= '1';
-
         wait for CLK_PERIOD;
-
-        -- RR: 3
-        triggers(3) <= '1';
-        triggers(2) <= '0';
-        all_data_in(3) <= "00000101";
 
         wait for CLK_PERIOD;
 
