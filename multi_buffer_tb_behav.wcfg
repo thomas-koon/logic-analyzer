@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="635.666 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,072.867 ns"></ZoomEndTime>
-      <Cursor1Time time="960.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="189.401 ns"></ZoomEndTime>
+      <Cursor1Time time="60.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="225"></NameColumnWidth>
+      <NameColumnWidth column_width="219"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/multi_buffer_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -48,22 +48,6 @@
    <wvobject fp_name="/multi_buffer_tb/CLK_PERIOD" type="other">
       <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
       <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(3)\/buffer_instance/buf" type="array">
-      <obj_property name="ElementShortName">buf[799:0]</obj_property>
-      <obj_property name="ObjectShortName">buf[799:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(2)\/buffer_instance/buf" type="array">
-      <obj_property name="ElementShortName">buf[799:0]</obj_property>
-      <obj_property name="ObjectShortName">buf[799:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(1)\/buffer_instance/buf" type="array">
-      <obj_property name="ElementShortName">buf[799:0]</obj_property>
-      <obj_property name="ObjectShortName">buf[799:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(0)\/buffer_instance/buf" type="array">
-      <obj_property name="ElementShortName">buf[799:0]</obj_property>
-      <obj_property name="ObjectShortName">buf[799:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(3)\/buffer_instance/rd_idx" type="other">
       <obj_property name="ElementShortName">rd_idx</obj_property>
@@ -96,5 +80,15 @@
    <wvobject fp_name="/multi_buffer_tb/uut/\gen_buffers(0)\/buffer_instance/wr_idx" type="other">
       <obj_property name="ElementShortName">wr_idx</obj_property>
       <obj_property name="ObjectShortName">wr_idx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/uut/triggered_channels" type="array">
+      <obj_property name="ElementShortName">triggered_channels[3:0]</obj_property>
+      <obj_property name="ObjectShortName">triggered_channels[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multi_buffer_tb/triggers" type="array">
+      <obj_property name="ElementShortName">triggers[3:0]</obj_property>
+      <obj_property name="ObjectShortName">triggers[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

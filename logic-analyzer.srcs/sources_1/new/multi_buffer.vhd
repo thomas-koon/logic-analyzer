@@ -1,14 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
-package multi_channel_type is
-    type multi_channels_data is array (natural range <>) of std_logic_vector (7 downto 0);
-end package multi_channel_type;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.multi_channel_type.all;
+use work.util.all;
 
 entity multi_buffer is
 

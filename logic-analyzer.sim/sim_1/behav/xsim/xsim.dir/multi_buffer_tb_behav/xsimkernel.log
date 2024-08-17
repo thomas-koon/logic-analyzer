@@ -2,3 +2,6 @@ Running: xsim.dir/multi_buffer_tb_behav/xsimk.exe -simmode gui -wdb multi_buffer
 Design successfully loaded
 Design Loading Memory Usage: 8324 KB (Peak: 8324 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8892 KB (Peak: 8892 KB)
+Simulation CPU Usage: 15 ms

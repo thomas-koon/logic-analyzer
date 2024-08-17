@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Aug 16 00:03:39 2024
+| Date         : Fri Aug 16 21:38:31 2024
 | Host         : tk00n running 64-bit major release  (build 9200)
 | Command      : report_utilization -file multi_buffer_utilization_synth.rpt -pb multi_buffer_utilization_synth.pb
 | Design       : multi_buffer
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  451 |     0 |          0 |     14600 |  3.09 |
-|   LUT as Logic          |  451 |     0 |          0 |     14600 |  3.09 |
+| Slice LUTs*             | 2273 |     0 |          0 |     14600 | 15.57 |
+|   LUT as Logic          | 2273 |     0 |          0 |     14600 | 15.57 |
 |   LUT as Memory         |    0 |     0 |          0 |      5000 |  0.00 |
-| Slice Registers         |  271 |     0 |          0 |     29200 |  0.93 |
-|   Register as Flip Flop |  271 |     0 |          0 |     29200 |  0.93 |
+| Slice Registers         | 3322 |     0 |          0 |     29200 | 11.38 |
+|   Register as Flip Flop | 3322 |     0 |          0 |     29200 | 11.38 |
 |   Register as Latch     |    0 |     0 |          0 |     29200 |  0.00 |
-| F7 Muxes                |   32 |     0 |          0 |      7300 |  0.44 |
-| F8 Muxes                |    0 |     0 |          0 |      3650 |  0.00 |
+| F7 Muxes                |  416 |     0 |          0 |      7300 |  5.70 |
+| F8 Muxes                |  192 |     0 |          0 |      3650 |  5.26 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 235   |          Yes |           - |        Reset |
+| 3286  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 36    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -148,17 +148,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  235 |        Flop & Latch |
-| LUT2     |  208 |                 LUT |
-| LUT4     |  161 |                 LUT |
-| CARRY4   |  152 |          CarryLogic |
-| LUT5     |  120 |                 LUT |
-| LUT3     |   76 |                 LUT |
+| FDCE     | 3286 |        Flop & Latch |
+| LUT6     | 1006 |                 LUT |
+| LUT5     |  520 |                 LUT |
+| MUXF7    |  416 |               MuxFx |
+| LUT4     |  405 |                 LUT |
+| LUT2     |  368 |                 LUT |
+| LUT3     |  336 |                 LUT |
+| CARRY4   |  216 |          CarryLogic |
+| MUXF8    |  192 |               MuxFx |
+| LUT1     |  124 |                 LUT |
 | IBUF     |   38 |                  IO |
 | FDRE     |   36 |        Flop & Latch |
-| MUXF7    |   32 |               MuxFx |
-| LUT1     |   20 |                 LUT |
-| LUT6     |   14 |                 LUT |
 | OBUF     |   12 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Fri Aug 16 00:02:07 2024
+  **** Start of session at: Fri Aug 16 21:35:54 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source multi_buffer.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 529.699 ; gain = 200.148
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 532.410 ; gain = 198.918
 Command: read_checkpoint -auto_incremental -incremental C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/utils_1/imports/synth_1/data_buf.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/utils_1/imports/synth_1/data_buf.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,27 +25,27 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44232
+INFO: [Synth 8-7075] Helper process launched with PID 4304
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 992.855 ; gain = 450.855
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 993.281 ; gain = 449.809
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'multi_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:29]
-INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'multi_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:22]
+INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:52]
 INFO: [Synth 8-638] synthesizing module 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'single_buffer' (0#1) [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:16]
-INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:59]
-INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:59]
-INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:59]
-INFO: [Synth 8-256] done synthesizing module 'multi_buffer' (0#1) [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:29]
-WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:80]
-WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:80]
-WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:80]
+INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:52]
+INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:52]
+INFO: [Synth 8-3491] module 'single_buffer' declared at 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd:4' bound to instance 'buffer_instance' of component 'single_buffer' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'multi_buffer' (0#1) [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:22]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:89]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:86]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:83]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd:80]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1104.527 ; gain = 562.527
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1105.051 ; gain = 561.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1104.527 ; gain = 562.527
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1105.051 ; gain = 561.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -53,10 +53,10 @@ Start Loading Part and Timing Information
 Loading part: xc7s25csga324-1
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7s25csga324-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1104.527 ; gain = 562.527
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1105.051 ; gain = 561.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1104.527 ; gain = 562.527
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1105.566 ; gain = 562.094
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -66,23 +66,25 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 12    
 	   2 Input   31 Bit       Adders := 8     
-	   2 Input    8 Bit       Adders := 8     
+	   2 Input   12 Bit       Adders := 8     
 	   2 Input    4 Bit       Adders := 8     
 +---Registers : 
-	               48 Bit    Registers := 4     
+	              800 Bit    Registers := 4     
 	               32 Bit    Registers := 9     
 	                8 Bit    Registers := 5     
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input   48 Bit        Muxes := 4     
+	   2 Input  800 Bit        Muxes := 4     
 	   2 Input   31 Bit        Muxes := 8     
-	   2 Input    8 Bit        Muxes := 12    
+	   2 Input   12 Bit        Muxes := 8     
+	   4 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 4     
 	   2 Input    7 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 20    
 	   5 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -102,20 +104,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:51 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:01:19 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:51 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:01:19 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:51 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:01:24 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -133,37 +135,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -180,52 +182,53 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   152|
-|3     |LUT1   |    20|
-|4     |LUT2   |   208|
-|5     |LUT3   |    76|
-|6     |LUT4   |   161|
-|7     |LUT5   |   120|
-|8     |LUT6   |    14|
-|9     |MUXF7  |    32|
-|10    |FDCE   |   235|
-|11    |FDRE   |    36|
-|12    |IBUF   |    38|
-|13    |OBUF   |    12|
+|2     |CARRY4 |   216|
+|3     |LUT1   |   124|
+|4     |LUT2   |   368|
+|5     |LUT3   |   336|
+|6     |LUT4   |   405|
+|7     |LUT5   |   520|
+|8     |LUT6   |  1006|
+|9     |MUXF7  |   416|
+|10    |MUXF8  |   192|
+|11    |FDCE   |  3286|
+|12    |FDRE   |    36|
+|13    |IBUF   |    38|
+|14    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-----------------------------------+----------------+------+
 |      |Instance                           |Module          |Cells |
 +------+-----------------------------------+----------------+------+
-|1     |top                                |                |  1105|
-|2     |  \gen_buffers[0].buffer_instance  |single_buffer   |   263|
-|3     |  \gen_buffers[1].buffer_instance  |single_buffer_0 |   262|
-|4     |  \gen_buffers[2].buffer_instance  |single_buffer_1 |   254|
-|5     |  \gen_buffers[3].buffer_instance  |single_buffer_2 |   254|
+|1     |top                                |                |  6956|
+|2     |  \gen_buffers[0].buffer_instance  |single_buffer   |  1725|
+|3     |  \gen_buffers[1].buffer_instance  |single_buffer_0 |  1724|
+|4     |  \gen_buffers[2].buffer_instance  |single_buffer_1 |  1716|
+|5     |  \gen_buffers[3].buffer_instance  |single_buffer_2 |  1716|
 +------+-----------------------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1277.434 ; gain = 735.434
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:40 . Memory (MB): peak = 1328.293 ; gain = 784.820
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1284.273 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1328.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 824 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1380.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1395.512 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: cdac5e29
+Synth Design complete | Checksum: b49c8e39
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:01:03 . Memory (MB): peak = 1380.098 ; gain = 845.625
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1380.098 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:49 . Memory (MB): peak = 1395.512 ; gain = 858.352
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1395.512 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1/multi_buffer.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file multi_buffer_utilization_synth.rpt -pb multi_buffer_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 00:03:39 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 21:38:31 2024...
