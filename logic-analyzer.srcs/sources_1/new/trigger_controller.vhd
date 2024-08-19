@@ -50,7 +50,8 @@ entity trigger_controller is
 
         mode               : in std_logic_vector(2 downto 0);
         
-        set_param          : in std_logic;
+        set_mode_param     : in std_logic;
+        set_target         : in std_logic;
         param              : in std_logic_vector(7 downto 0);
 
         trigger            : out std_logic_vector (CHANNELS - 1 downto 0);
@@ -91,6 +92,12 @@ architecture behavioral of trigger_controller is
     signal curr_sda_byte   : std_logic_vector(7 downto 0) := (others => '0');
     signal curr_scl_byte   : std_logic_vector(7 downto 0) := (others => '0');
 
+    -- keep track of data received so far (decrements from target)
+    signal capture_target : integer_array := (others => 0);
+
+    -- keep track of triggered and stopped channels
+    signal triggered : std_logic_vector(CHANNELS - 1 downto 0);
+    signal stopped : std_logic_vector(CHANNELS - 1 downto 0);
 begin
 
     -- assign modes based on channel_sel
@@ -126,7 +133,7 @@ begin
         if reset = '1' then
 
         elsif rising_edge(clk) then
-            if set_param = '1' and mode = "000" then
+            if set_mode_param = '1' and mode = "000" then
                 selected_channel := get_channel_from_onehot(channel_sel);
                 case channel_modes(selected_channel) is
 
@@ -150,6 +157,36 @@ begin
         end if;
     end process;
 
+    process(clk, reset)
+        variable selected_channel : integer;
+    begin
+        if reset = '1' then
+            -- Reset stop signals and captured data
+            for i in 0 to CHANNELS-1 loop
+                stop(i) <= '0';
+                stopped(i) <= '0';
+                capture_target(i) <= 0;
+            end loop;
+        elsif rising_edge(clk) then
+            if set_target = '1' and set_mode_param = '0' then
+                selected_channel := get_channel_from_onehot(channel_sel);
+                capture_target(selected_channel) <= to_integer(unsigned(param));
+            end if;
+
+            for i in 0 to CHANNELS-1 loop
+                stop(i) <= '0';
+                if channels_in(i) = '1' and triggered(i) = '1' and stopped(i) <= '0' then
+                    if capture_target(i) > 0 then
+                        capture_target(i) <= capture_target(i) - 1;
+                    elsif capture_target(i) = 0 then
+                        stop(i) <= '1';
+                        stopped(i) <= '1';
+                    end if;
+                end if;
+            end loop;
+        end if;
+    end process;
+
     -- trigger
     process(clk, reset)
     begin
@@ -159,17 +196,19 @@ begin
             for i in CHANNELS - 1 downto 0 loop
                 pattern_matched(i) <= '0';
                 trigger(i) <= '0';
+                triggered(i) <= '0';
             end loop;
 
         elsif rising_edge(clk) then
             for i in CHANNELS - 1 downto 0 loop
                 trigger(i) <= '0';
-                if channels_in(i) = '1' then
+                if channels_in(i) = '1' and triggered(i) <= '0' and stopped(i) <= '0' then
                     case channel_modes(i) is
                         when AUTO =>
 
                             -- AUTOmatically trigger
                             trigger(i) <= '1';
+                            triggered(i) <= '1';
 
                         when EDGE =>
 
@@ -178,11 +217,13 @@ begin
                                 -- Check if there is a high value in the current byte
                                 if all_data_in(i) > "00000000" then
                                     trigger(i) <= '1';
+                                    triggered(i) <= '1';
                                 end if;
                             else
                                 -- Check if there is a low value in the current byte
                                 if all_data_in(i) < "11111111" then
                                     trigger(i) <= '1';
+                                    triggered(i) <= '1';
                                 end if;
                             end if;
 
@@ -192,6 +233,7 @@ begin
                             -- and check for pattern
                             prev_curr_data(i) <= prev_byte(i) & all_data_in(i);
                             trigger(i) <= contains_pattern(prev_curr_data(i), pattern_to_match(i));
+                            triggered(i) <= contains_pattern(prev_curr_data(i), pattern_to_match(i));
                             prev_byte(i) <= all_data_in(i);
                         
                         when COUNTING =>
@@ -206,6 +248,7 @@ begin
                                 count_reached(i) <= TRUE;
                                 curr_count(i) <= 0;
                                 trigger(i) <= '1';
+                                triggered(i) <= '1';
                             end if;
 
                         when UART =>
@@ -213,6 +256,7 @@ begin
                             -- check for a low value
                             if all_data_in(i) < "11111111" then
                                 trigger(i) <= '1';
+                                triggered(i) <= '1';
                             end if;
 
                         when I2C =>
@@ -231,6 +275,7 @@ begin
                             (curr_sda_byte(1) = '1' and curr_sda_byte(0) = '0' and curr_scl_byte(1) = '1' and curr_scl_byte(0) = '1') or
                             (prev_sda_byte(0) = '1' and curr_sda_byte(7) = '0' and prev_scl_byte(0) = '1' and curr_scl_byte(7) = '1') then
                                 trigger(i) <= '1';
+                                triggered(i) <= '1';
                             end if;
                             
                             prev_sda_byte <= curr_sda_byte;
@@ -241,6 +286,8 @@ begin
             end loop;
         end if;                    
     end process;
+
+    
 
         
 

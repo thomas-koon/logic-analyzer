@@ -10,17 +10,18 @@ architecture behavioral of trigger_controller_tb is
 
     constant CLK_PERIOD : time := 20 ns;
 
-    signal clk           : std_logic := '0';
-    signal reset         : std_logic := '1';
-    signal all_data_in   : multi_channels_data(3 downto 0);
-    signal sample_pulse  : std_logic := '0';
-    signal channels_in   : std_logic_vector(3 downto 0);
-    signal channel_sel   : std_logic_vector(3 downto 0) := (others => '0');
-    signal mode          : std_logic_vector(2 downto 0) := (others => '0');
-    signal set_param     : std_logic := '0';
-    signal param         : std_logic_vector(7 downto 0) := (others => '0');
-    signal trigger       : std_logic_vector(3 downto 0);
-    signal stop          : std_logic_vector(3 downto 0);
+    signal clk                : std_logic := '0';
+    signal reset              : std_logic := '1';
+    signal all_data_in        : multi_channels_data(3 downto 0);
+    signal sample_pulse       : std_logic := '0';
+    signal channels_in        : std_logic_vector(3 downto 0);
+    signal channel_sel        : std_logic_vector(3 downto 0) := (others => '0');
+    signal mode               : std_logic_vector(2 downto 0) := (others => '0');
+    signal set_mode_param     : std_logic := '0';
+    signal set_target         : std_logic := '0';
+    signal param              : std_logic_vector(7 downto 0) := (others => '0');
+    signal trigger            : std_logic_vector(3 downto 0);
+    signal stop               : std_logic_vector(3 downto 0);
 
 begin
 
@@ -44,7 +45,8 @@ begin
             channels_in  => channels_in,
             channel_sel  => channel_sel,
             mode         => mode,
-            set_param    => set_param,
+            set_mode_param    => set_mode_param,
+            set_target   => set_target,
             param        => param,
             trigger      => trigger,
             stop         => stop
@@ -84,26 +86,26 @@ begin
 
         -- Set channel 3's counting parameter to 4
         channel_sel <= "1000";
-        set_param <= '1';
+        set_mode_param <= '1';
         param <= "00000100";
         wait for CLK_PERIOD;
 
         -- Activate channel 3
         channel_sel <= "0000";
-        set_param <= '0';
+        set_mode_param <= '0';
         param <= "00000000";
         channels_in <= "1000";
         wait for CLK_PERIOD;
 
         -- Set channel 2's pattern
         channel_sel <= "0100";
-        set_param <= '1';
+        set_mode_param <= '1';
         param <= "11111111";
         wait for CLK_PERIOD;
 
         -- Activate channel 2
         channel_sel <= "0000";
-        set_param <= '0';
+        set_mode_param <= '0';
         param <= "00000000";
         channels_in <= "1100";
         wait for CLK_PERIOD;
@@ -111,7 +113,7 @@ begin
         -- Send one half of the pattern for channel 2
         -- Set channel 1 to falling edge
         channel_sel <= "0010";
-        set_param <= '1';
+        set_mode_param <= '1';
         param <= "00000000";
         all_data_in(2) <= "00001111";
         wait for CLK_PERIOD;
@@ -119,7 +121,10 @@ begin
         -- Activate channel 1
         -- Send other half of pattern for channel 2
         -- No falling edge for channel 1
-        set_param <= '0';
+        set_target <= '1';
+        channel_sel <= "1000";
+        param <= "00001110";
+        set_mode_param <= '0';
         channels_in <= "1110";
         all_data_in(2) <= "11110000";   
         all_data_in(1) <= "11111111";
@@ -135,22 +140,28 @@ begin
         wait for CLK_PERIOD;
 
         -- I2C setup: Channel 1 SCL, Channel 0 SDA
-        channels_in <= "0000";
-        set_param <= '1';
+        channels_in <= "1000";
+        set_mode_param <= '1';
         channel_sel <= "0001";
         param <= "00100001"; 
         wait for CLK_PERIOD;
 
-        set_param <= '0';
-        channels_in <= "0001";
+        set_mode_param <= '0';
+        channels_in <= "1001";
         all_data_in(1) <= "11111111";   
         all_data_in(0) <= "11111111";
         wait for CLK_PERIOD;
 
+        set_target <= '1';
+        channel_sel <= "0001";
+        param <= "00000100";
         all_data_in(1) <= "11111111";   
         all_data_in(0) <= "11111111";
         wait for CLK_PERIOD;
 
+        set_target <= '0';
+        channel_sel <= "0000";
+        param <= "00000000";
         all_data_in(1) <= "11111001";   
         all_data_in(0) <= "11111111";
         wait for CLK_PERIOD;
@@ -159,7 +170,7 @@ begin
         all_data_in(0) <= "11110111";
         wait for CLK_PERIOD;
 
-        --assert trigger(0) = '1' report "Channel 0 should trigger, but didn't." severity failure;
+        
         wait for CLK_PERIOD;
 
         -- Stop simulation
