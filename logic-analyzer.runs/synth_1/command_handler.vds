@@ -1,17 +1,26 @@
-
-*** Running vivado
-    with args -log command_handler.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source command_handler.tcl
-
-
-
-****** Vivado v2024.1 (64-bit)
-  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
-  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
-  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Mon Aug 19 15:27:32 2024
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Aug 19 15:27:32 2024
+# Process ID: 22596
+# Current directory: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1
+# Command line: vivado.exe -log command_handler.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source command_handler.tcl
+# Log file: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1/command_handler.vds
+# Journal file: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1\vivado.jou
+# Running On        :tk00n
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency     :3187 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :16907 MB
+# Swap memory       :6174 MB
+# Total Virtual     :23081 MB
+# Available Virtual :5883 MB
+#-----------------------------------------------------------
 source command_handler.tcl -notrace
 create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 530.395 ; gain = 200.715
 Command: read_checkpoint -auto_incremental -incremental C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/utils_1/imports/synth_1/data_buf.dcp

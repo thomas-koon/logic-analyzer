@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s25csga324-1" LaunchTime="1724009671" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/data_buf.dcp">
-  <File Type="PA-TCL" Name="multi_buffer.tcl"/>
-  <File Type="REPORTS-TCL" Name="multi_buffer_reports.tcl"/>
-  <File Type="RDS-RDS" Name="multi_buffer.vds"/>
-  <File Type="RDS-UTIL" Name="multi_buffer_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="multi_buffer_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="multi_buffer.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7s25csga324-1" LaunchTime="1724106448" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/data_buf.dcp">
+  <File Type="PA-TCL" Name="command_handler.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="command_handler_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="command_handler_reports.tcl"/>
+  <File Type="RDS-RDS" Name="command_handler.vds"/>
+  <File Type="RDS-UTIL" Name="command_handler_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="command_handler_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="command_handler.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="command_handler_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="command_handler_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/util.vhd">
@@ -14,14 +17,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/command_handler.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/single_buffer.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/multi_buffer.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -35,8 +46,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="multi_buffer"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="command_handler"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

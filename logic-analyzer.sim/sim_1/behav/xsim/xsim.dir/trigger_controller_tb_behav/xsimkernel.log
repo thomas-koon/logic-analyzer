@@ -2,3 +2,6 @@ Running: xsim.dir/trigger_controller_tb_behav/xsimk.exe -simmode gui -wdb trigge
 Design successfully loaded
 Design Loading Memory Usage: 8324 KB (Peak: 8324 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8944 KB (Peak: 8944 KB)
+Simulation CPU Usage: 0 ms
