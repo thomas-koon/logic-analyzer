@@ -4,5 +4,8 @@ May 22 2024
 19:03:11
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,1723836328,vhdl,,,,multi_buffer_tb,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/single_buffer_tb.vhd,1723652831,vhdl,,,,single_buffer_tb,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd,1724045922,vhdl,,,,trigger_controller_tb,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd,1723836392,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,,,multi_buffer;multi_channel_type,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd,1723835355,vhdl,,,,single_buffer,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/trigger_controller.vhd,1724044937,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd,,,trigger_controller,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/util.vhd,1724016710,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd;C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/trigger_controller.vhd,,,util,,,,,,,,

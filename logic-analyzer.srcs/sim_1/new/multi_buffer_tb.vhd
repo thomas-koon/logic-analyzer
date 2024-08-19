@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.multi_channel_type.all;
+use work.util.all;
 
 entity multi_buffer_tb is
 end multi_buffer_tb;
