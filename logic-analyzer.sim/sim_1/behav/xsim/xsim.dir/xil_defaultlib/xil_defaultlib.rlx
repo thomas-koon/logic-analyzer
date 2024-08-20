@@ -2,10 +2,12 @@
 2020.2
 May 22 2024
 19:03:11
-C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,1723836328,vhdl,,,,multi_buffer_tb,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/command_handler_tb.vhd,1724173476,vhdl,,,,command_handler_tb,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,1724187842,vhdl,,,,multi_buffer_tb,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/single_buffer_tb.vhd,1723652831,vhdl,,,,single_buffer_tb,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd,1724089539,vhdl,,,,trigger_controller_tb,,,,,,,,
-C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd,1723836392,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,,,multi_buffer;multi_channel_type,,,,,,,,
-C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd,1723835355,vhdl,,,,single_buffer,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/command_handler.vhd,1724171559,vhdl,,,,command_handler,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/multi_buffer.vhd,1724186637,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,,,multi_buffer,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/single_buffer.vhd,1724187608,vhdl,,,,single_buffer,,,,,,,,
 C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/trigger_controller.vhd,1724089605,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd,,,trigger_controller,,,,,,,,
-C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/util.vhd,1724016710,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/trigger_controller_tb.vhd;C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/trigger_controller.vhd,,,util,,,,,,,,
+C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/util.vhd,1724171559,vhdl,C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/new/multi_buffer_tb.vhd,,,util,,,,,,,,

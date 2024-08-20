@@ -1,5 +1,5 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.util.all;
 
@@ -12,8 +12,11 @@ entity multi_buffer is
     port (
         clk               : in std_logic;
         reset             : in std_logic;
+
         all_data_in       : in multi_channels_data(CHANNELS - 1 downto 0); 
-        triggers          : in std_logic_vector(CHANNELS - 1 downto 0); 
+        triggers          : in std_logic_vector(CHANNELS - 1 downto 0);
+        stop              : in std_logic_vector(CHANNELS - 1 downto 0);
+
         data_out          : out std_logic_vector(7 downto 0);
         which_channel_out : out std_logic_vector(CHANNELS - 1 downto 0)
     );
@@ -40,6 +43,7 @@ architecture behavioral of multi_buffer is
             reset     : in std_logic;
             data_in   : in std_logic_vector(7 downto 0);
             trigger   : in std_logic;
+            stop      : in std_logic;
             read      : in std_logic;
             data_out  : out std_logic_vector(7 downto 0);
             out_en    : out std_logic
@@ -55,6 +59,7 @@ begin
                 reset     => reset,
                 data_in   => all_data_in(i),
                 trigger   => triggers(i),
+                stop      => stop(i),
                 read      => read_signals(i),
                 data_out  => all_data_out(i),
                 out_en    => buffer_has_data_out(i)
@@ -63,11 +68,14 @@ begin
 
     round_robin : process(clk, reset)
     begin
+
         if reset = '1' then
             prev_rr_idx <= 0;
             rr_idx <= 0;
             read_signals <= (others => '0');
+
         elsif rising_edge(clk) then
+
             if triggered_channels(rr_idx) = '1' or triggers(rr_idx) = '1' then
                 -- If triggered, set read signal for current channel only
                 read_signals <= (others => '0');
@@ -119,8 +127,15 @@ begin
     begin
         if reset = '1' then
             triggered_channels <= (others => '0');
-        else
+        elsif rising_edge(clk) then
             triggered_channels <= triggers;
+
+            for i in CHANNELS - 1 downto 0 loop              
+                if stop(i) = '1' then
+                    triggered_channels(i) <= '0';
+                end if;
+            end loop;
+
         end if;
     end process set_triggers;
 

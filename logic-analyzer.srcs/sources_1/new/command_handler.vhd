@@ -1,5 +1,5 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_1164.ALL;
 use IEEE.numeric_std.ALL;
 use work.util.all;
 
@@ -10,19 +10,19 @@ entity command_handler is
     );
 
     port ( 
-        clk : in STD_LOGIC;
-        reset : in STD_LOGIC;
+        clk : in std_logic;
+        reset : in std_logic;
 
-        command : in STD_LOGIC_VECTOR (7 downto 0);
+        command : in std_logic_vector (7 downto 0);
 
-        channels_in : out STD_LOGIC_VECTOR (CHANNELS - 1 downto 0);
-        channel_sel : out STD_LOGIC_VECTOR (CHANNELS - 1 downto 0);
-        mode : out STD_LOGIC_VECTOR (2 downto 0);
-        set_mode_param : out STD_LOGIC;
-        set_target : out STD_LOGIC;
-        param : out STD_LOGIC_VECTOR (7 downto 0);
-        trigger : out STD_LOGIC_VECTOR (CHANNELS - 1 downto 0);
-        stop : out STD_LOGIC_VECTOR (CHANNELS - 1 downto 0)
+        channels_in : out std_logic_vector (CHANNELS - 1 downto 0);
+        channel_sel : out std_logic_vector (CHANNELS - 1 downto 0);
+        mode : out std_logic_vector (2 downto 0);
+        set_mode_param : out std_logic;
+        set_target : out std_logic;
+        param : out std_logic_vector (7 downto 0);
+        trigger : out std_logic_vector (CHANNELS - 1 downto 0);
+        stop : out std_logic_vector (CHANNELS - 1 downto 0)
     );
 end command_handler;
 
@@ -45,8 +45,6 @@ begin
             param <= (others => '0');
             channel_sel <= (others => '0');
             mode <= (others => '0');
-            trigger <= (others => '0');
-            stop <= (others => '0');
             channels_in <= (others => '0');
 
         elsif rising_edge(clk) then

@@ -1,5 +1,5 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.util.all;
 
@@ -15,6 +15,7 @@ architecture sim of multi_buffer_tb is
     signal reset             : std_logic;
     signal all_data_in       : multi_channels_data(CHANNELS - 1 downto 0);
     signal triggers          : std_logic_vector(CHANNELS - 1 downto 0);
+    signal stop              : std_logic_vector(CHANNELS - 1 downto 0);
     signal data_out          : std_logic_vector(7 downto 0);
     signal which_channel_out : std_logic_vector(CHANNELS - 1 downto 0);
 
@@ -27,6 +28,7 @@ architecture sim of multi_buffer_tb is
             reset             : in std_logic;
             all_data_in       : in multi_channels_data(CHANNELS - 1 downto 0);
             triggers          : in std_logic_vector(CHANNELS - 1 downto 0);
+            stop              : in std_logic_vector(CHANNELS - 1 downto 0);
             data_out          : out std_logic_vector(7 downto 0);
             which_channel_out : out std_logic_vector(CHANNELS - 1 downto 0)
         );
@@ -43,6 +45,7 @@ begin
             reset             => reset,
             all_data_in       => all_data_in,
             triggers          => triggers,
+            stop              => stop,
             data_out          => data_out,
             which_channel_out => which_channel_out
         );
@@ -64,6 +67,7 @@ begin
         reset <= '1';
         all_data_in <= (others => (others => '0'));
         triggers <= (others => '0');
+        stop <= (others => '0');
         wait for 20 ns;
 
         reset <= '0';
@@ -73,11 +77,13 @@ begin
         all_data_in(1) <= x"BB";
         all_data_in(2) <= x"CC"; 
         all_data_in(3) <= x"DD";
-        triggers <= "1000";
+        triggers <= "1111";
         wait for CLK_PERIOD;
 
+        triggers <= "0000";
         wait for CLK_PERIOD;
 
+        stop <= "1111"; 
         wait for CLK_PERIOD;
 
         wait for CLK_PERIOD;
