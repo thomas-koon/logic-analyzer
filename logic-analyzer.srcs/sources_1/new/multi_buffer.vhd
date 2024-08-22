@@ -39,14 +39,15 @@ architecture behavioral of multi_buffer is
 
     component single_buffer
         port (
-            clk       : in std_logic;
-            reset     : in std_logic;
-            data_in   : in std_logic_vector(7 downto 0);
-            trigger   : in std_logic;
-            stop      : in std_logic;
-            read      : in std_logic;
-            data_out  : out std_logic_vector(7 downto 0);
-            out_en    : out std_logic
+            clk          : in std_logic;
+            reset        : in std_logic;
+            data_in      : in std_logic_vector(7 downto 0);
+            trigger      : in std_logic;
+            stop         : in std_logic;
+            read         : in std_logic;
+            data_out     : out std_logic_vector(7 downto 0);
+            out_en       : out std_logic;
+            pre_trig_buf : out std_logic_vector(15 downto 0)
         );
     end component;
 
@@ -62,7 +63,8 @@ begin
                 stop      => stop(i),
                 read      => read_signals(i),
                 data_out  => all_data_out(i),
-                out_en    => buffer_has_data_out(i)
+                out_en    => buffer_has_data_out(i),
+                pre_trig_buf => open
             );
     end generate;
 
@@ -128,7 +130,7 @@ begin
         if reset = '1' then
             triggered_channels <= (others => '0');
         elsif rising_edge(clk) then
-            triggered_channels <= triggers;
+            triggered_channels <= triggered_channels or triggers;
 
             for i in CHANNELS - 1 downto 0 loop              
                 if stop(i) = '1' then

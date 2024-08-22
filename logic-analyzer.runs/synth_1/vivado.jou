@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Aug 20 15:06:34 2024
-# Process ID: 22404
+# Start of session at: Wed Aug 21 10:35:25 2024
+# Process ID: 21520
 # Current directory: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1
 # Command line: vivado.exe -log command_handler.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source command_handler.tcl
 # Log file: C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1/command_handler.vds
@@ -19,6 +19,6 @@
 # Host memory       :16907 MB
 # Swap memory       :6174 MB
 # Total Virtual     :23081 MB
-# Available Virtual :4385 MB
+# Available Virtual :5700 MB
 #-----------------------------------------------------------
 source command_handler.tcl -notrace

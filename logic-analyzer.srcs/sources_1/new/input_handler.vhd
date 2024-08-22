@@ -21,30 +21,34 @@ entity input_handler is
 end entity input_handler;
 
 architecture behavioral of input_handler is
-    -- Declare internal signals for each channel's data
-    signal line0      : line;
-    signal line1      : line;
-    signal line2      : line;
-    signal line3      : line;
     
     -- Files for each channel
-    file data_file_0 : text open read_mode is "input_data_0.txt";
-    file data_file_1 : text open read_mode is "input_data_1.txt";
-    file data_file_2 : text open read_mode is "input_data_2.txt";
-    file data_file_3 : text open read_mode is "input_data_3.txt";
-
-    -- Simulate input data for each channel
-    signal channel_data : multi_channels_data(CHANNELS - 1 downto 0) := (others => (others => '0'));
+    file data_file_0 : text open read_mode is "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/data/input0.txt";
+    file data_file_1 : text open read_mode is "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/data/input1.txt";
+    file data_file_2 : text open read_mode is "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/data/input2.txt";
+    file data_file_3 : text open read_mode is "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/data/input3.txt";
     
 begin
     -- File-based input process for simulation (read from 4 files)
     process (clk, reset)
+        -- Declare internal signals for each channel's data
+        variable line0      : line;
+        variable line1      : line;
+        variable line2      : line;
+        variable line3      : line;
+
+        variable channel_data : multi_channels_data(CHANNELS - 1 downto 0) := (others => (others => '0'));
     begin
+
         if reset = '1' then
+            
             -- Reset all channel data
             for i in 0 to CHANNELS-1 loop
-                channel_data(i) <= (others => '0');
+                channel_data(i) := (others => '0');
             end loop;
+
+            data_out <= (others => (others => '0'));
+
         elsif rising_edge(clk) then
             -- Read data from each file if channel is selected
             if channels_in(0) = '1' and not endfile(data_file_0) then
@@ -53,6 +57,8 @@ begin
             end if;
             
             if channels_in(1) = '1' and not endfile(data_file_1) then
+
+                report "[input_handler] reading channel 1";
                 readline(data_file_1, line1);
                 read(line1, channel_data(1)); -- Read data for channel 1
             end if;
@@ -66,17 +72,11 @@ begin
                 readline(data_file_3, line3);
                 read(line3, channel_data(3)); -- Read data for channel 3
             end if;
-        end if;
-    end process;
 
-    -- Assign the read data to output
-    process (clk, reset)
-    begin
-        if reset = '1' then
-            data_out <= (others => (others => '0'));
-        elsif rising_edge(clk) then
             data_out <= channel_data;  -- Output data for all channels
+
         end if;
+
     end process;
 
 end architecture behavioral;

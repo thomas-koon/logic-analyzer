@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Aug 20 15:06:34 2024
+  **** Start of session at: Wed Aug 21 10:35:25 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source command_handler.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 530.840 ; gain = 199.766
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 531.887 ; gain = 200.156
 Command: read_checkpoint -auto_incremental -incremental C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/utils_1/imports/synth_1/data_buf.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/utils_1/imports/synth_1/data_buf.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,9 +25,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6536
+INFO: [Synth 8-7075] Helper process launched with PID 33076
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 994.812 ; gain = 453.180
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 990.707 ; gain = 446.770
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'command_handler' [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/command_handler.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'command_handler' (0#1) [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/command_handler.vhd:29]
@@ -42,21 +42,21 @@ WARNING: [Synth 8-7129] Port stop[2] in module command_handler is either unconne
 WARNING: [Synth 8-7129] Port stop[1] in module command_handler is either unconnected or has no load
 WARNING: [Synth 8-7129] Port stop[0] in module command_handler is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1103.422 ; gain = 561.789
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1101.336 ; gain = 557.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1103.422 ; gain = 561.789
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.336 ; gain = 557.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga324-1
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7s25csga324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.336 ; gain = 557.398
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1103.422 ; gain = 561.789
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1103.422 ; gain = 561.789
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.336 ; gain = 557.398
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -102,20 +102,20 @@ WARNING: [Synth 8-7129] Port stop[2] in module command_handler is either unconne
 WARNING: [Synth 8-7129] Port stop[1] in module command_handler is either unconnected or has no load
 WARNING: [Synth 8-7129] Port stop[0] in module command_handler is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:49 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:33 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:34 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:34 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -133,37 +133,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -198,16 +198,16 @@ Report Instance Areas:
 |1     |top      |       |    85|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:55 . Memory (MB): peak = 1275.582 ; gain = 733.949
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 1272.102 ; gain = 728.164
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1286.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1281.059 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1380.539 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1375.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -215,8 +215,8 @@ Synth Design complete | Checksum: b535f493
 INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:57 . Memory (MB): peak = 1380.539 ; gain = 845.215
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1380.539 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:42 . Memory (MB): peak = 1375.938 ; gain = 839.320
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1375.938 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.runs/synth_1/command_handler.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file command_handler_utilization_synth.rpt -pb command_handler_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 20 15:07:49 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 10:36:18 2024...

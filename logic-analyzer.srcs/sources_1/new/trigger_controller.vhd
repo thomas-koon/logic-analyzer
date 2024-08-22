@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 08/16/2024 12:54:55 PM
--- Design Name: 
--- Module Name: trigger_controller - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 use ieee.numeric_std.all;
@@ -141,6 +120,7 @@ begin
                         if_pos_edge_trig(selected_channel) <= param(0);
 
                     when PATTERN =>
+                        report "[trigger_controller] pattern parameter set";
                         pattern_to_match(selected_channel) <= param;
 
                     when COUNTING =>
@@ -194,9 +174,11 @@ begin
         if reset = '1' then
 
             for i in CHANNELS - 1 downto 0 loop
+                prev_byte(i) <= "00000000";
                 pattern_matched(i) <= '0';
                 trigger(i) <= '0';
                 triggered(i) <= '0';
+                stopped(i) <= '0';
             end loop;
 
         elsif rising_edge(clk) then

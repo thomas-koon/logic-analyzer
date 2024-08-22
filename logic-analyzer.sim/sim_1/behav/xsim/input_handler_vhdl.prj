@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../logic-analyzer.srcs/sources_1/new/util.vhd" \
-"../../../../logic-analyzer.srcs/sources_1/new/input_handler.vhd" \
-
-# Do not sort compile order
-nosort

@@ -10,6 +10,7 @@ package util is
 
     -- Type definition for multi-channel data
     type multi_channels_data is array (natural range <>) of std_logic_vector (7 downto 0);
+    
 end package util;
 
 package body util is

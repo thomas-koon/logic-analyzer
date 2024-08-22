@@ -1,5 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/input_handler.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'input_handler'
-ERROR: [VRFC 10-2989] 'channels' is not declared [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/input_handler.vhd:13]
-ERROR: [VRFC 10-9458] unit 'input_handler' is ignored due to previous errors [C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/input_handler.vhd:8]
-INFO: [VRFC 10-8704] VHDL file 'C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sources_1/new/input_handler.vhd' is ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/thoma/OneDrive/Desktop/logic-analyzer/logic-analyzer.srcs/sim_1/top_level_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_tb'

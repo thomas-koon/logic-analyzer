@@ -39,7 +39,6 @@ architecture behavioral of command_handler_tb is
 
 begin
 
-    -- Instantiate the command_handler component
     uut: command_handler
         port map (
             clk => clk,
@@ -55,7 +54,6 @@ begin
             stop => stop
         );
 
-    -- Clock generation process
     clk_process : process
     begin
         clk <= '1';
@@ -64,7 +62,6 @@ begin
         wait for CLK_PERIOD/2;
     end process;
 
-    -- Stimulus process
     stim_proc: process
     begin
         -- Apply reset

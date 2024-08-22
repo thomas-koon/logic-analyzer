@@ -20,9 +20,7 @@ entity command_handler is
         mode : out std_logic_vector (2 downto 0);
         set_mode_param : out std_logic;
         set_target : out std_logic;
-        param : out std_logic_vector (7 downto 0);
-        trigger : out std_logic_vector (CHANNELS - 1 downto 0);
-        stop : out std_logic_vector (CHANNELS - 1 downto 0)
+        param : out std_logic_vector (7 downto 0)
     );
 end command_handler;
 

@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../logic-analyzer.srcs/sources_1/new/util.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/command_handler.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/input_handler.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/multi_buffer.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/single_buffer.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/trigger_controller.vhd" \
+"../../../../logic-analyzer.srcs/sources_1/new/top_level.vhd" \
+"../../../../logic-analyzer.srcs/sim_1/top_level_tb.vhd" \
+
+# Do not sort compile order
+nosort
