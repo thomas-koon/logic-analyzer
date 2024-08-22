@@ -79,10 +79,10 @@ void relocate(char *dp)
 	iki_relocate(dp, "xsim.dir/top_level_tb_behav/xsim.reloc",  (void **)funcTab, 17);
 	iki_vhdl_file_variable_register(dp + 25432);
 	iki_vhdl_file_variable_register(dp + 25488);
-	iki_vhdl_file_variable_register(dp + 29688);
-	iki_vhdl_file_variable_register(dp + 29792);
-	iki_vhdl_file_variable_register(dp + 29896);
-	iki_vhdl_file_variable_register(dp + 30000);
+	iki_vhdl_file_variable_register(dp + 29696);
+	iki_vhdl_file_variable_register(dp + 29800);
+	iki_vhdl_file_variable_register(dp + 29904);
+	iki_vhdl_file_variable_register(dp + 30008);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

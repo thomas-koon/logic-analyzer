@@ -112,7 +112,7 @@ begin
         if reset = '1' then
 
         elsif rising_edge(clk) then
-            if set_mode_param = '1' and mode = "000" then
+            if set_mode_param = '1' then
                 selected_channel := get_channel_from_onehot(channel_sel);
                 case channel_modes(selected_channel) is
 

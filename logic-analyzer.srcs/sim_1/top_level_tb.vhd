@@ -64,19 +64,15 @@ begin
         reset <= '0';
         wait for 20 ns;
 
-        -- Command 010: set channel 1 (01) mode to PATTERN (011)
+        -- Set mode (010) of channel 1 (01) mode to PATTERN (011)
         command <= "01001011"; 
         wait for CLK_PERIOD;
 
-        -- Channel 1 set PATTERN mode parameter
-        command <= "01101000";
-        wait for CLK_PERIOD;
-
-        -- Channel 1 parameter
+        -- Set parameter for channel 1 PATTERN
         command <= "11100111";
         wait for CLK_PERIOD;
 
-        -- Channel 1 set target data amount
+        -- Set target data amount (100) for channel 1 (01)
         command <= "10001000";
         wait for CLK_PERIOD;
 
@@ -84,13 +80,57 @@ begin
         command <= "00000111";
         wait for CLK_PERIOD;
 
-        -- Start channel 1
-        command <= "00100100";
+        -- Set mode (010) of channel 3 (11) mode to I2C (101)
+        command <= "01011101";
+        wait for CLK_PERIOD;
+
+        -- Set parameter for channel 3 I2C
+        -- SCL: 0001; SDA: 1000
+        command <= "00011000";
+        wait for CLK_PERIOD;
+
+        -- Set target data amount (100) for channel 3 (11)
+        command <= "10011000";
+        wait for CLK_PERIOD;
+
+        -- Channel 3 target data amount
+        command <= "00001000";
+        wait for CLK_PERIOD;
+
+        -- Set mode (010) of channel 0 (00) to EDGE (010)
+        command <= "01000010";
+        wait for CLK_PERIOD;
+
+        -- Set parameter of channel 0 EDGE to falling edge
+        command <= "00000000";
+        wait for CLK_PERIOD;
+
+        -- Set target data amount (100) for channel 0 (00)
+        command <= "10000000";
+        wait for CLK_PERIOD;
+
+        -- Channel 0 target data amount;
+        command <= "11111111";
+        wait for CLK_PERIOD;
+
+        -- Start channels (001) 3, 1, 0 (1011)
+        command <= "00110110";
         wait for CLK_PERIOD;
 
         command <= "00000000";
-        wait for CLK_PERIOD * 15;
+        wait for CLK_PERIOD * 10;
 
+        
+
+        -- I2C set parameter SDA, SCL 
+
+        -- Channel 3 set target data amount
+
+        -- Channel 3 target data amount
+
+        -- Start I2C channels
+
+        
 
 
 

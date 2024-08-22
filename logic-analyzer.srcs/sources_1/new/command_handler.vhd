@@ -67,14 +67,6 @@ begin
                         if to_integer(unsigned( command(4 downto 3) )) < 4 then
                             channel_sel(to_integer(unsigned( command(4 downto 3) ))) <= '1';
                             mode <= command(2 downto 0);
-                        end if;
-
-                    -- set mode parameter
-                    -- parameter set in next cycle (in the else statement)
-                    when "011" =>
-
-                        if to_integer(unsigned( command(4 downto 3) )) < 4 then
-                            channel_sel(to_integer(unsigned( command(4 downto 3) ))) <= '1';
                             pending_mode_param <= '1';
                         end if;
 
